@@ -7,6 +7,7 @@
     tools:context="com.example.sca25.musicplayer.MainActivity">
 
     <TextView
+        android:id="@+id/songTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Big Bang - FXXK It"
@@ -14,30 +15,30 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="64dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingRight="8dp"
+        android:text="Play"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/songTitle"
+        app:layout_constraintHorizontal_bias=".367"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-        <Button
-            android:id="@+id/play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Play"
-            android:textAlignment="center"
-            android:paddingRight="8dp"/>
-        <Button
-            android:id="@+id/pause"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pause"
-            android:textAlignment="center"
-            android:paddingLeft="8dp"/>
+        />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="Pause"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/songTitle"
+        app:layout_constraintLeft_toRightOf="@id/play"
+         />
+
 
 </android.support.constraint.ConstraintLayout>
